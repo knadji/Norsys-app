@@ -18,15 +18,14 @@ public class RestrictionFilter implements Filter {
     private static final String VUE_PUBLIC              = "/creationClient";
 
     @Override
-    public void doFilter( ServletRequest req, ServletResponse resp, FilterChain chain ) throws IOException,
+    public void doFilter( final ServletRequest req, final ServletResponse resp, final FilterChain chain )
+            throws IOException,
             ServletException {
 
-        // Récupération et castage des paramétres
-        HttpServletRequest request = (HttpServletRequest) req;
-        HttpServletResponse response = (HttpServletResponse) resp;
+        final HttpServletRequest request = (HttpServletRequest) req;
+        final HttpServletResponse response = (HttpServletResponse) resp;
 
-        // Récupération de la session
-        HttpSession session = request.getSession();
+        final HttpSession session = request.getSession();
 
         //
         if ( session.getAttribute( ATT_SESSION_UTILISATEUR ) == null ) {
@@ -44,7 +43,7 @@ public class RestrictionFilter implements Filter {
     }
 
     @Override
-    public void init( FilterConfig arg0 ) throws ServletException {
+    public void init( final FilterConfig arg0 ) throws ServletException {
         // TODO Auto-generated method stub
 
     }
