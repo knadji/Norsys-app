@@ -21,8 +21,8 @@ public class CollectAppsServerControleur {
     private static final Logger LOGGER = LoggerFactory.getLogger( CollectAppsServerControleur.class );
 
     /**
-     * Récupere les noms des applications dans le serveur
-     * 
+     * Recupere les noms des applications dans le serveur
+     *
      * @return La liste des noms des applications
      */
     public Iterable<String> collectAllDeployedApps() {
@@ -40,8 +40,8 @@ public class CollectAppsServerControleur {
     }
 
     /**
-     * Récupérer le MBeanServeur Catalina
-     * 
+     * Recuperation le MBeanServeur Catalina
+     *
      * @return Le MBeanServer
      */
     private MBeanServer findServer() {

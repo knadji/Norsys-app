@@ -32,9 +32,9 @@ public class CreationClientForm {
         }
 
         if ( erreurs.isEmpty() ) {
-            resultat = "Succés de la création du client.";
+            resultat = "Succes de la crï¿½ation du client.";
         } else {
-            resultat = "Echec de la création du client.";
+            resultat = "Echec de la creation du client.";
         }
     }
 
@@ -48,24 +48,24 @@ public class CreationClientForm {
     }
 
     /**
-     * Vérification des informations saisi par le client
+     * Verification des informations saisi par le client
      */
     private void virifierInfoClient() {
 
         if ( !( nomClient != null && nomClient.length() >= 3 ) ) {
-            setErreur( CHAMP_NOM, "Le nom doit contenir au minimum 3 caractères." );
+            setErreur( CHAMP_NOM, "Le nom doit contenir au minimum 3 caracteres." );
         }
 
         if ( !( prenomClient != null && prenomClient.length() >= 3 ) ) {
-            setErreur( CHAMP_PRENOM, "Le prénom doit contenir au minimum 3 caractères." );
+            setErreur( CHAMP_PRENOM, "Le prenom doit contenir au minimum 3 caracteres." );
         }
 
         if ( !( adresseDeLivraison != null && adresseDeLivraison.length() >= 10 ) ) {
-            setErreur( CHAMP_ADRESSE, "l'adresse de livraison doit contenir au moins 10 caractères." );
+            setErreur( CHAMP_ADRESSE, "l'adresse de livraison doit contenir au moins 10 caracteres." );
         }
 
         if ( !( telephoneClient != null && telephoneClient.matches( "^\\d+$" ) && telephoneClient.length() >= 4 ) ) {
-            setErreur( CHAMP_TEL, "Le numéro de téléphone doit contenir au moins 4 chiffres." );
+            setErreur( CHAMP_TEL, "Le numero de telephone doit contenir au moins 4 chiffres." );
         }
     }
 

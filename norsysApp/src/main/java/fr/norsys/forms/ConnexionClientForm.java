@@ -28,7 +28,7 @@ public class ConnexionClientForm {
         recupParamConnexion( request );
         virifierInfoConnexion();
         if ( erreurs.isEmpty() ) {
-            resultat = "Succés de la connexion du client.";
+            resultat = "Succes de la connexion du client.";
         } else {
             resultat = "Echec de la connexion du client.";
         }
@@ -43,7 +43,7 @@ public class ConnexionClientForm {
         try {
             mdpClient = Sha.hash256( request.getParameter( CHAMP_MDP ) );
         } catch ( final NoSuchAlgorithmException e ) {
-            LOGGER.debug( "Problème de hashage du mot de passe {}", e.getMessage() );
+            LOGGER.debug( "Probleme de hashage du mot de passe {}", e.getMessage() );
         }
     }
 
@@ -58,7 +58,7 @@ public class ConnexionClientForm {
         }
         if ( mdpClient != null && mdpClient.trim().length() != 0 ) {
             if ( mdpClient.trim().length() < 6 ) {
-                setErreur( CHAMP_MDP, "Les mots de passe doivent contenir au moins 6 caractères. " );
+                setErreur( CHAMP_MDP, "Les mots de passe doivent contenir au moins 6 caracteres. " );
             }
         } else {
             setErreur( CHAMP_MDP, "Merci de saisir votre mot de passe." );

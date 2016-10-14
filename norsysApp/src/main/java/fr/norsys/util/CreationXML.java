@@ -52,7 +52,7 @@ public class CreationXML {
         doc.appendChild( racine );
         racine.appendChild( queries );
 
-        // Métrique OS
+        // Metrique OS
         queries.appendChild( getQuerie( doc, "java.lang:type=OperatingSystem", "ProcessCpuLoad",
                 "os.cpu.processCpuLoad" ) );
         queries.appendChild( getQuerie( doc, "java.lang:type=OperatingSystem", "ProcessCpuTime",
@@ -117,9 +117,9 @@ public class CreationXML {
         // JVM Runtime
         queries.appendChild( getQuerie( doc, "java.lang:type=Runtime", "Uptime", "jvm.runtime.uptime" ) );
 
-        // Métrique TOMCAT
+        // Metrique TOMCAT
 
-        // Métrique par application(s)
+        // Metrique par application(s)
         for ( final String app : appsInServer ) {
             if ( !app.equals( "" ) && !app.equals( "docs" ) && !app.equals( "examples" )
                     && !app.equals( "manager" ) && !app.equals( "host-manager" ) ) {

@@ -29,7 +29,7 @@ public class BaseDao<T> {
         try {
             result = jdbcTemplate.queryForObject( requeteSql, mapper, objects );
         } catch ( final EmptyResultDataAccessException e ) {
-            LOGGER.debug( "Pas d'élément remontés", e );
+            LOGGER.debug( "Pas de tuples", e );
         }
         return result;
     }

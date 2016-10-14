@@ -29,9 +29,9 @@ public class InscriptionClientForm {
         recupParamInscription( request );
         virifierInfoInscription();
         if ( erreurs.isEmpty() ) {
-            resultat = "Succés de la création du client.";
+            resultat = "Succes de la creation du client.";
         } else {
-            resultat = "Echec de la création du client.";
+            resultat = "Echec de la creation du client.";
         }
     }
 
@@ -46,7 +46,7 @@ public class InscriptionClientForm {
             System.out.println( "mdpClient Inscription =  " + mdpClient );
             confirmationMdpClient = Sha.hash256( request.getParameter( "confirmation" ) );
         } catch ( final NoSuchAlgorithmException e ) {
-            LOGGER.debug( "Problème de hashage du mot de passe : {}", e.getMessage() );
+            LOGGER.debug( "Probleme de hashage du mot de passe : {}", e.getMessage() );
         }
     }
 
@@ -63,9 +63,9 @@ public class InscriptionClientForm {
         if ( mdpClient != null && mdpClient.trim().length() != 0 &&
                 confirmationMdpClient != null && confirmationMdpClient.trim().length() != 0 ) {
             if ( !mdpClient.equals( confirmationMdpClient ) ) {
-                setErreur( CHAMP_MDP, "Les mots de passe entrés sont différents, merci de les saisir à nouveau." );
+                setErreur( CHAMP_MDP, "Les mots de passe entres sont diffï¿½rents, merci de les saisir a nouveau." );
             } else if ( mdpClient.trim().length() < 6 ) {
-                setErreur( CHAMP_MDP, "Les mots de passe doivent contenir au moins 6 caractères. " );
+                setErreur( CHAMP_MDP, "Les mots de passe doivent contenir au moins 6 caracteres. " );
             }
         } else {
             setErreur( CHAMP_MDP, "Merci de saisir et confirmer votre mot de passe." );

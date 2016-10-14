@@ -42,7 +42,7 @@ public class UploadForm {
         recupParam( request );
         creationDuFichier( fichier, chemin );
         if ( erreurs.isEmpty() ) {
-            resultat = "Succès de l'envoi du fichier.";
+            resultat = "Succes de l'envoi du fichier.";
         } else {
             resultat = "Echec de l'envoi du fichier.";
         }
@@ -68,14 +68,14 @@ public class UploadForm {
             }
         } catch ( final IllegalStateException e ) {
             LOGGER.debug( "Erreur IllegaleStateException {}", e.getMessage() );
-            setErreur( CHAMP_FICHIER, "Les données envoyées sont trop volumineuses." );
+            setErreur( CHAMP_FICHIER, "Les donnees envoyees sont trop volumineuses." );
         } catch ( final IOException e ) {
             LOGGER.debug( "Erreur IOException {}", e.getMessage() );
             setErreur( CHAMP_FICHIER, "Erreur de configuration du serveur" );
         } catch ( final ServletException e ) {
             LOGGER.debug( "Erreur ServletException {}", e.getMessage() );
             setErreur( CHAMP_FICHIER,
-                    "Ce type de requête n'est pas supporté, merci d'utiliser le formulaire prévu pour envoyer votre fichier." );
+                    "Ce type de requete n'est pas supporte, merci d'utiliser le formulaire prevu pour envoyer votre fichier." );
         }
     }
 
@@ -92,14 +92,14 @@ public class UploadForm {
             if ( nomFichier != null && contenuFichier != null ) {
                 fichier.setNom( nomFichier );
             } else {
-                LOGGER.debug( "Merci de sélectionner un fichier à envoyer." );
+                LOGGER.debug( "Merci de selectionner un fichier a envoyer." );
             }
         }
         if ( erreurs.isEmpty() ) {
             try {
                 ecrireFichier( contenuFichier, nomFichier, chemin );
             } catch ( final Exception e ) {
-                setErreur( CHAMP_FICHIER, "Erreur l'ors de l'écriture du fichier sur le disque." );
+                setErreur( CHAMP_FICHIER, "Erreur l'ors de lecriture du fichier dans le disque." );
             }
         }
     }
@@ -152,7 +152,7 @@ public class UploadForm {
     /**
      *
      * @param nomFichier
-     * @return l'extension du fichier
+     * @return lextension du fichier
      */
     private String getExtensionFichier( final String nomFichier ) {
         String extention = "";
@@ -173,7 +173,7 @@ public class UploadForm {
 
     /**
      *
-     * @return une map d'erreur
+     * @return une map derreur
      */
     public Map<String, String> getErreurs() {
         return erreurs;
@@ -182,9 +182,9 @@ public class UploadForm {
     /**
      *
      * @param champ
-     *            ou écrire le message
+     *            ou ecrire le message
      * @param message
-     *            d'erreur à écrire
+     *            d'erreur a ecrire
      */
     private void setErreur( final String champ, final String message ) {
         erreurs.put( champ, message );

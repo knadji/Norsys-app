@@ -35,7 +35,7 @@ public class ClientDaoImpl implements ClientDao {
                         client.getNom(), client.getPrenom(), client.getAdresseDeLivraison(),
                         client.getNumTel(), client.getId() );
         if ( updated == 0 ) {
-            LOGGER.info( "Erreur à l'enregistrement du client" );
+            LOGGER.info( "Erreur a l'enregistrement du client" );
         }
     }
 
@@ -46,7 +46,7 @@ public class ClientDaoImpl implements ClientDao {
                         "INSERT INTO Client ( idClient, mdp, email) VALUES (idClient_seq.NEXTVAL,?,?)",
                         client.getMotDePasse(), client.getAdresseMail() );
         if ( updated == 0 ) {
-            LOGGER.info( "Erreur à l'enregistrement du client" );
+            LOGGER.info( "Erreur a l'enregistrement du client" );
         }
     }
 

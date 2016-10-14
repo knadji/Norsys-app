@@ -26,7 +26,7 @@ public class UploadControleur {
         final UploadForm form = new UploadForm();
         final Fichier fichier = form.enregistrerFichier( request, CHEMIN );
 
-        // Création et configuration du jmxTrans-agent.xml
+        // Creation et configuration du jmxTrans-agent.xml
         new CreationXML();
 
         request.setAttribute( ATT_FORM, form );
